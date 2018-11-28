@@ -1,0 +1,25 @@
+* {
+    font-family: museo-sans-rounded, sans-serif;
+}
+
+body {
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (2000 - 300)));
+}
+
+h1 {
+    color: $trc-green;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+p {
+    line-height: 1.5;
+    color: $trc-grey;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+p+p {
+    margin-top: 1.5;
+}

@@ -16,6 +16,36 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/assets/img/symbol.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/symbol.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/css/reset.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/reset-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/theme.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/theme-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -103,7 +133,7 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/scss/_reset.scss": {
+	"/scss/_breakpoints.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -111,7 +141,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_reset.css",
+		"oAP": "/scss/_breakpoints.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -139,6 +169,19 @@
 		"oA": 1,
 		"oAP": "/scss/_vars.css",
 		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/scss/reset.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/reset.css",
+		"oF": 3,
 		"oS": 0,
 		"uL": 1
 		},

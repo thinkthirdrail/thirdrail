@@ -1,5 +1,16 @@
 <?php
 
+// enqueue
+function tr_enqueue_style() {
+    wp_enqueue_style( 'reset-style', get_stylesheet_directory_uri() . '/css/reset.css' );
+    wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i' );
+    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/theme.css');
+
+    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/js/min/theme.min.js' , array( 'jquery' ), null, false);
+}
+
+add_action( 'wp_enqueue_scripts', 'tr_enqueue_style' );
+
 // Register Nav
 function tr_register_menus() {
     register_nav_menus(
