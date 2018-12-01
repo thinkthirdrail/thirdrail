@@ -8,7 +8,7 @@ h1 {
   color: #44b06c;
   font-weight: 800;
   font-size: 2.3em;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
   font-family: museo-sans-rounded, sans-serif; }
 
 a {
@@ -114,12 +114,13 @@ button {
   color: #fff;
   text-transform: uppercase;
   border: none;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 700;
-  margin-top: 2em;
+  margin-top: 2.5em;
   display: block;
   padding: 1.5em 3em;
-  border-radius: 50px; }
+  border-radius: 50px;
+  letter-spacing: 2px; }
   button.green {
     background-color: #44b06c; }
   button.grey {
@@ -206,13 +207,14 @@ button {
       color: #fff;
       text-transform: uppercase;
       border: none;
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 700;
       margin-top: 2em;
       display: block;
       padding: 1.5em 3em;
       background-color: #878085;
-      height: auto; }
+      height: auto;
+      letter-spacing: 2px; }
     .home-right form select {
       font-family: museo-sans-rounded, sans-serif;
       text-transform: uppercase;

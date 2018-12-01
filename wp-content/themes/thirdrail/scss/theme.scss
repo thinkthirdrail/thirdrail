@@ -113,12 +113,13 @@ button {
     color: #fff;
     text-transform: uppercase;
     border: none;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
-    margin-top: 2em;
+    margin-top: 2.5em;
     display: block;
     padding: 1.5em 3em;
     border-radius: 50px;
+    letter-spacing: 2px;
     &.green {
         background-color: $trc-green;
     }
@@ -234,13 +235,14 @@ button {
             color: #fff;
             text-transform: uppercase;
             border: none;
-            font-size: 0.7em;
+            font-size: 0.6em;
             font-weight: 700;
             margin-top: 2em;
             display: block;
             padding: 1.5em 3em;
             background-color: $trc-grey;
             height: auto;
+            letter-spacing: 2px;
         }
         select {
             font-family: museo-sans-rounded, sans-serif;
