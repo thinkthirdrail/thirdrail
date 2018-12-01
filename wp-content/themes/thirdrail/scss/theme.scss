@@ -5,35 +5,49 @@
 @import 'breakpoints';
 
 
+body {
+    background: #efefef8a;
+}
+
 // global
 
+.underline {
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $trc-green;
+        bottom: 0;
+    }
+}
+
 header {
-    height: 10vh;
+    // height: 8vh;
     background: #fff;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .left {
-        min-width: 180px;
-        height: 100%;
-        width: 15%;
+        width: 225px;
+        height: 75px;
         display: flex;
         .menu-tab {
             height: 100%;
-            width: 60%;
+            width: 150px;
             background: $trc-green;
             display: flex;
             align-items: center;
-            padding: 1em;
+            padding: 0.5em;
             box-sizing: border-box;
-            justify-content: space-around;
+            justify-content: space-evenly;
             .burger {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 55%;
-                width: 30%;
+                height: 30%;
+                width: 20%;
                 .line {
                     width: 100%;
                     height: 3px;
@@ -46,11 +60,12 @@ header {
                 display: block;
                 text-transform: uppercase;
                 font-weight: 600;
+                font-size: 0.7em;
             }
         }
         .chat-tab {
             height: 100%;
-            width: 40%;
+            width: 75px;
             background: $trc-grey;
             display: flex;
             align-items: center;
@@ -88,6 +103,8 @@ main {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    // background-image: url('../assets/img/tic-tac-toe.png');
+
 }
 
 // button
@@ -96,11 +113,12 @@ button {
     color: #fff;
     text-transform: uppercase;
     border: none;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: 700;
-    margin-top: 3em;
-    height: 8vh;
-    width: 150px;
+    margin-top: 2em;
+    display: block;
+    padding: 1.5em 3em;
+    border-radius: 50px;
     &.green {
         background-color: $trc-green;
     }
@@ -112,17 +130,35 @@ button {
 .wpcf7 {
     width: 100%;
     input, textarea, select {
-        height: 6vh;
+        height: 7vh;
         padding: 1em;
         border: none;
-        background-color: #e8e9e6;
+        background-color: #fff;
         margin-bottom: 1.5em;
         width: 100%;
         box-sizing: border-box;
     }
     textarea {
-        height: 20vh;
+        height: 25vh;
+        max-height: 200px;
         margin-bottom: 0;
+    }
+    .name-email {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include for-tablet-portrait-up {
+            flex-direction:  row;
+        }
+        #home-name, #home-email {
+            width: 100%;
+        }
+    }
+    .wpcf7-form-control-wrap {
+        width: 100%;
+        @include for-tablet-portrait-up {
+            width: 48%;
+        }
     }
 }
 
@@ -130,23 +166,40 @@ button {
 
 .home-left, .home-right {
     width: 100%;
-    // height: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
 
     @include for-tablet-portrait-up {
-        width: 50%;
+        // width: 50%;
+        // justify-content: flex-start;
     }
 }
 
 .home-left {
     padding: 1em;
     box-sizing: border-box;
-    align-items: flex-start;
+    align-items: center;
+    h1 {
+        display: inline-block;
+    }
     p {
-        width: 80%;
+        display: inline-block;
+        width: 100%;
+        @include for-tablet-portrait-up {
+            width: 80%;
+        }
+    }
+    .center {
+        // display: flex;
+        // justify-content: flex-end;
+        // flex-direction: column;
+    }
+    @include for-tablet-portrait-up {
+        width: 60%;
+        // justify-content: flex-start;
     }
 }
 
@@ -154,24 +207,40 @@ button {
     padding: 1em;
     box-sizing: border-box;
     align-items: center;
+    justify-content: flex-start;
+    // background: #e6e6e6;
+    @include for-tablet-portrait-up {
+        justify-content: center;
+        width: 40%;
+    }
     form {
-        width: 90%;
-        float: right;
+        width: 100%;
+        margin: 0 auto;
+        // float: right;
+        @include for-tablet-portrait-up {
+            width: 100%;
+        }
         input, textarea, select {
             width: 100%;
             border-radius: 0;
             font-family: museo-sans-rounded, sans-serif;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0px;
+            background: #fff;
+            padding: 2em;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             color: #fff;
             text-transform: uppercase;
             border: none;
-            font-size: 0.8em;
+            font-size: 0.7em;
             font-weight: 700;
-            margin-top: 3em;
-            height: 8vh;
-            width: 150px;
+            margin-top: 2em;
+            display: block;
+            padding: 1.5em 3em;
             background-color: $trc-grey;
+            height: auto;
         }
         select {
             font-family: museo-sans-rounded, sans-serif;
@@ -181,6 +250,36 @@ button {
     }
     ::placeholder {
         text-transform: uppercase;
-        color: #a7a7a7;
+        color: rgba(black, 0.3);
+        font-size: 0.9em;
+        letter-spacing: 2px;
+
+    }
+}
+
+// footer
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    > div {
+        display: flex;
+        li {
+            display: inline-block;
+            a {
+                color: #fff;
+                font-size: 0.7em;
+            }
+        }
+    }
+    p {
+        &.tag {
+            color: #fff;
+            padding-right: 2em;
+            font-weight: 800;
+            font-size: 0.5em;
+        }
     }
 }

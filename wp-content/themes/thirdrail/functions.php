@@ -16,6 +16,7 @@ function tr_register_menus() {
     register_nav_menus(
         array(
 	    'primary-menu' => __( 'Primary Menu', 'tr' ),
+        'footer-menu' => __( 'Footer Menu', 'tr' ),
 	   )
     );
 }
