@@ -5,11 +5,13 @@ body {
   font-size: calc(14px + (25 - 14) * ((100vw - 300px) / (2000 - 300))); }
 
 h1 {
-  color: #44b06c;
+  color: white;
   font-weight: 800;
   font-size: 2.3em;
   margin-bottom: 0.6em;
   font-family: museo-sans-rounded, sans-serif; }
+  h1 .underline {
+    color: #44b06c; }
 
 a {
   text-decoration: none;

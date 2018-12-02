@@ -7,11 +7,14 @@ body {
 }
 
 h1 {
-    color: $trc-green;
+    color: white;
     font-weight: 800;
     font-size: 2.3em;
     margin-bottom: 0.6em;
     font-family: museo-sans-rounded, sans-serif;
+    .underline {
+        color: $trc-green; 
+    }
 }
 
 a {
