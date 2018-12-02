@@ -19,7 +19,7 @@ a {
 
 p {
   line-height: 1.5;
-  color: #878085;
+  color: white;
   font-size: 0.8em;
   font-weight: 300;
   font-family: museo-sans-rounded, sans-serif; }
@@ -31,7 +31,16 @@ li {
   text-decoration: none; }
 
 body {
-  background: #efefefed; }
+  background-color: #878085; }
+
+.bg {
+  background-image: url("../assets/img/bg.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: -1; }
 
 .underline {
   position: relative; }
@@ -43,6 +52,7 @@ body {
     bottom: 0; }
 
 header {
+  position: fixed;
   background: transparent;
   width: 100%;
   display: flex;
@@ -109,7 +119,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 75px; }
 
 button {
   color: #fff;

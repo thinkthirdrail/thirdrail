@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<div class="bg"></div>
+
 <header>
     <div class="left">
         <div class="menu-tab">
