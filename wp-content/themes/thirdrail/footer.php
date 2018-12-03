@@ -1,7 +1,5 @@
 </main>
-
 <footer>
-    <!-- <p class="tag">&copy;2018 </p> -->
     <?php wp_nav_menu('footer-menu'); ?>
 </footer>
 

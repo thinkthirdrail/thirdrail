@@ -24,9 +24,11 @@
             <i class="far fa-comment-alt"></i>
         </div>
     </div>
+    <div class="head-line"></div>
     <div class="right">
-        <div class="svg"><?php echo file_get_contents(TEMPLATEPATH . "/assets/img/symbol.svg"); ?>
+        <div class="svg"><?php echo file_get_contents(TEMPLATEPATH . "/assets/img/symbol.svg"); ?></div>
     </div>
+
 </header>
 
 <main>

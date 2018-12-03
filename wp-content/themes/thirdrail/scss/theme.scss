@@ -33,6 +33,12 @@ body {
 }
 
 header {
+    .head-line {
+        height: 3px;
+        background-color: $trc-grey;
+        margin: 0 3em;
+        width: 100%;
+    }
     // height: 8vh;
     position: fixed;
     background: transparent;
@@ -143,13 +149,18 @@ button {
 .wpcf7 {
     width: 100%;
     input, textarea, select {
-        height: 7vh;
+        height: auto;
         padding: 1em;
         border: none;
         background-color: #fff;
         margin-bottom: 1.5em;
         width: 100%;
         box-sizing: border-box;
+        &:focus {
+            outline-color: $trc-green;
+            outline-offset: -5px;
+            outline-style: solid;
+        }
     }
     textarea {
         height: 25vh;
@@ -185,6 +196,7 @@ button {
 }
 
 .home-left {
+    position: relative;
     padding: 1em;
     box-sizing: border-box;
     // align-items: center;
@@ -201,6 +213,15 @@ button {
             width: 80%;
         }
     }
+    .foot-line {
+        width: 40%;
+        height: 3px;
+        background-color: #44b06c;
+        position: absolute;
+        bottom: -3%;
+        left: 0;
+        display: none;
+    }
 }
 
 .home-right {
@@ -208,6 +229,7 @@ button {
     box-sizing: border-box;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
     @include for-tablet-portrait-up {
         justify-content: center;
         width: 40%;
@@ -227,6 +249,12 @@ button {
             background: #fff;
             padding: 2em;
             box-sizing: border-box;
+            &:focus {
+                outline-color: $trc-green;
+                outline-offset: -6px;
+                outline-style: solid;
+                outline-width: 3px;
+            }
         }
         input[type="submit"] {
             color: #fff;
@@ -240,6 +268,9 @@ button {
             background-color: $trc-grey;
             height: auto;
             letter-spacing: 2px;
+            &:focus {
+                outline-style: none;
+            }
         }
         select {
             font-family: museo-sans-rounded, sans-serif;
@@ -281,4 +312,14 @@ footer {
             font-size: 0.5em;
         }
     }
+    .foot-line {
+        height: 3px;
+        background-color: #44b06c;
+        margin: 0 3em;
+        width: 100%;
+    }
 }
+
+div.wpcf7-response-output, div.wpcf7-validation-errors { display: none !important; }
+span.wpcf7-not-valid-tip { display: none; }
+input[aria-invalid="true"], select[aria-invalid="true"] { border-color: red; background-color: rgba(153,0,0,0.3); }

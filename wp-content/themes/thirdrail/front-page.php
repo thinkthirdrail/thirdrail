@@ -7,6 +7,7 @@
             We offer a multitude of products and services including Web Development, business branding, Application design and animation — pretty much the whole lot.
         </p>
         <button class="green">View Services</button>
+        <div class="foot-line"></div>
 </section>
 <section class="home-right">
     <?php echo do_shortcode('[contact-form-7 id="28" title="Front Page Contact Form"]'); ?>
