@@ -60,11 +60,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  header .head-line {
-    height: 2px;
-    background-color: #44b06c;
-    margin: 0 3em;
-    width: 100%; }
   header .left {
     width: 225px;
     height: 75px;
@@ -199,7 +194,8 @@ button {
     width: 100%; }
     @media (min-width: 600px) {
       .home-left p {
-        width: 80%; } }
+        width: 80%;
+        max-width: 600px; } }
   .home-left .foot-line {
     width: 40%;
     height: 3px;
@@ -232,8 +228,9 @@ button {
       -webkit-appearance: none;
       -webkit-border-radius: 0px;
       background: #fff;
-      padding: 2em;
-      box-sizing: border-box; }
+      padding: 1.5em;
+      box-sizing: border-box;
+      font-size: 0.6em; }
       .home-right form input:focus, .home-right form textarea:focus, .home-right form select:focus {
         outline-color: #44b06c;
         outline-offset: -6px;
@@ -259,7 +256,7 @@ button {
       color: #a7a7a7; }
   .home-right ::placeholder {
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
     font-size: 0.9em;
     letter-spacing: 2px; }
 
