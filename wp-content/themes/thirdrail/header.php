@@ -21,12 +21,13 @@
             <p class="menu-state">Menu</p>
         </div>
         <div class="chat-tab">
-            <i class="far fa-comment-alt"></i>
+            <i class="far fa-comment-alt"></i><span><p>Chat</p></span>
         </div>
     </div>
     <div class="head-line"></div>
     <div class="right">
         <div class="svg"><?php echo file_get_contents(TEMPLATEPATH . "/assets/img/symbol.svg"); ?></div>
+        <!-- <span class="thirdrail">thirdrail</span> -->
     </div>
 
 </header>
