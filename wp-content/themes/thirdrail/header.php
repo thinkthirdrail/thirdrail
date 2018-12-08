@@ -9,6 +9,7 @@
 <body>
 
 <div class="bg"></div>
+<div class="main-menu"></div>
 
 <header>
     <div class="left">
@@ -27,7 +28,6 @@
     <div class="head-line"></div>
     <div class="right">
         <div class="svg"><?php echo file_get_contents(TEMPLATEPATH . "/assets/img/symbol.svg"); ?></div>
-        <!-- <span class="thirdrail">thirdrail</span> -->
     </div>
 
 </header>

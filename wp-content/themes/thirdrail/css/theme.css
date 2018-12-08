@@ -39,12 +39,6 @@ li {
 body {
   background-color: #878085; }
 
-.thirdrail {
-  color: white;
-  font-family: museo-sans-rounded, sans-serif;
-  font-weight: 800;
-  font-size: 1.3em; }
-
 .bg {
   background-image: url("../assets/img/bg.jpg");
   background-size: cover;
@@ -65,6 +59,19 @@ body {
     height: 2px;
     background-color: #44b06c;
     bottom: 0; }
+
+.main-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #44b06c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: none; }
+  .main-menu.active {
+    z-index: 9998;
+    display: block; }
 
 header {
   position: fixed;
@@ -99,6 +106,12 @@ header {
           background: white;
           border-radius: 50px;
           transition: all ease 0.25s; }
+        header .left .menu-tab .burger.active > .line:first-of-type {
+          transform: rotate(45deg) translateX(9px); }
+        header .left .menu-tab .burger.active > .line:nth-of-type(2) {
+          opacity: 0; }
+        header .left .menu-tab .burger.active > .line:nth-of-type(3) {
+          transform: rotate(-45deg) translateX(10px); }
       header .left .menu-tab p.menu-state {
         color: #fff;
         font-family: museo-sans-rounded, sans-serif;
@@ -108,11 +121,11 @@ header {
         font-size: 0.7em; }
       header .left .menu-tab:hover {
         cursor: pointer; }
-        header .left .menu-tab:hover > .burger > .line:first-of-type {
+        header .left .menu-tab:hover > .burger:not(.active) > .line:first-of-type {
           transform: rotate(36deg); }
-        header .left .menu-tab:hover > .burger > .line:nth-of-type(2) {
+        header .left .menu-tab:hover > .burger:not(.active) > .line:nth-of-type(2) {
           opacity: 0; }
-        header .left .menu-tab:hover > .burger > .line:nth-of-type(3) {
+        header .left .menu-tab:hover > .burger:not(.active) > .line:nth-of-type(3) {
           transform: rotate(-36deg); }
     header .left .chat-tab {
       height: 100%;
@@ -148,6 +161,8 @@ header {
     header .right .svg svg {
       width: 40px;
       padding-right: 2em; }
+      header .right .svg svg.active .st0 {
+        fill: #fff; }
     @media (min-width: 600px) {
       header .right .svg:after {
         content: "thirdrail";
@@ -166,6 +181,11 @@ header {
         padding-right: 110px;
         cursor: pointer; }
         header .right .svg:hover:after {
+          opacity: 1; }
+      header .right .svg.active {
+        padding-right: 110px;
+        cursor: pointer; }
+        header .right .svg.active:after {
           opacity: 1; } }
 
 footer {
@@ -174,20 +194,23 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  z-index: 9999;
+  transition: all ease 0.25s; }
+  footer.active {
+    width: 100%; }
   @media (min-width: 1200px) {
     footer {
       width: 50%; } }
 
 main {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
-  margin: 0 auto;
-  padding-top: 75px; }
+  margin: 0 auto; }
 
 button {
   color: #fff;
@@ -200,11 +223,22 @@ button {
   padding: 1.5em 3em;
   border-radius: 50px;
   letter-spacing: 2px;
-  align-self: flex-start; }
+  align-self: flex-start;
+  box-shadow: 0 0 0 3px #fff;
+  position: relative; }
+  button::after {
+    content: "";
+    padding: 5px;
+    position: absolute; }
   button.green {
     background-color: #44b06c; }
   button.grey {
     background-color: #878085; }
+  button:hover::after {
+    content: "";
+    padding: 5px;
+    position: absolute;
+    transform: scale(0.8); }
 
 .wpcf7 {
   width: 100%; }
@@ -240,7 +274,7 @@ button {
         width: 48%; } }
 
 .home-left, .home-right {
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;

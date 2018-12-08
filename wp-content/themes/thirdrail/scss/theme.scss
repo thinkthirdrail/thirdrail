@@ -9,18 +9,11 @@
     ::selection {
         color: $trc-green;
         background: white;
-    }   
+    }
 }
 
 body {
     background-color: $trc-grey;
-}
-
-.thirdrail {
-    color: white;
-    font-family: museo-sans-rounded, sans-serif;
-    font-weight: 800;
-    font-size: 1.3em;
 }
 
 .bg {
@@ -46,6 +39,21 @@ body {
         height: 2px;
         background-color: $trc-green;
         bottom: 0;
+    }
+}
+
+.main-menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: $trc-green;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: none;
+    &.active {
+        z-index: 9998;
+        display: block;
     }
 }
 
@@ -83,6 +91,17 @@ header {
                     border-radius: 50px;
                     transition: all ease 0.25s;
                 }
+                &.active {
+                    >.line:first-of-type {
+                        transform: rotate(45deg) translateX(9px)
+                    }
+                    >.line:nth-of-type(2) {
+                        opacity: 0;
+                    }
+                    >.line:nth-of-type(3) {
+                        transform: rotate(-45deg) translateX(10px)
+                    }
+                }
             }
             p.menu-state {
                 color: #fff;
@@ -94,7 +113,7 @@ header {
             }
             &:hover {
                 cursor: pointer;
-                >.burger {
+                >.burger:not(.active) {
                     > .line:first-of-type {
                         transform: rotate(36deg);
                     }
@@ -118,7 +137,6 @@ header {
             transition: width ease 0.25s;
             span {
                 p {
-                    // display: none;
                     color: #fff;
                     font-family: museo-sans-rounded, sans-serif;
                     text-transform: uppercase;
@@ -153,6 +171,11 @@ header {
             svg {
                 width: 40px;
                 padding-right: 2em;
+                &.active {
+                    .st0 {
+                        fill: #fff;
+                    }
+                }
             }
             @include for-tablet-portrait-up {
                 &:after {
@@ -176,6 +199,13 @@ header {
                         opacity: 1;
                     }
                 }
+                &.active {
+                    padding-right: 110px;
+                    cursor: pointer;
+                    &:after {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
@@ -188,21 +218,24 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
-
+    z-index: 9999;
+    transition: all ease 0.25s;
+    &.active {
+        width: 100%;
+    }
     @include for-desktop-up {
         width: 50%;
     }
 }
 
 main {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
     margin: 0 auto;
-    padding-top: 75px;
 }
 
 // button
@@ -219,11 +252,27 @@ button {
     border-radius: 50px;
     letter-spacing: 2px;
     align-self: flex-start;
+    box-shadow: 0 0 0 3px #fff;
+    position: relative;
+    &::after {
+        content: "";
+        padding: 5px;
+        position: absolute;
+    }
     &.green {
         background-color: $trc-green;
     }
     &.grey {
         background-color: $trc-grey;
+    }
+    &:hover {
+        &::after {
+            content: "";
+            padding: 5px;
+            position: absolute;
+            transform: scale(0.8);
+        }
+
     }
 }
 
@@ -270,7 +319,7 @@ button {
 // Front page
 
 .home-left, .home-right {
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
